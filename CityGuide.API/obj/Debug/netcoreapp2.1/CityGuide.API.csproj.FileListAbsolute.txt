@@ -1,0 +1,14 @@
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\bin\Debug\netcoreapp2.1\CityGuide.API.deps.json
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\bin\Debug\netcoreapp2.1\CityGuide.API.runtimeconfig.json
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\bin\Debug\netcoreapp2.1\CityGuide.API.runtimeconfig.dev.json
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\bin\Debug\netcoreapp2.1\CityGuide.API.dll
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\bin\Debug\netcoreapp2.1\CityGuide.API.pdb
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.csprojAssemblyReference.cache
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.csproj.CoreCompileInputs.cache
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.RazorAssemblyInfo.cache
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.RazorAssemblyInfo.cs
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.AssemblyInfoInputs.cache
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.AssemblyInfo.cs
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.RazorTargetAssemblyInfo.cache
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.dll
+C:\Users\ashley.saylik\Documents\My Practice Projects\angular\CityGuide.API\CityGuide.API\obj\Debug\netcoreapp2.1\CityGuide.API.pdb
