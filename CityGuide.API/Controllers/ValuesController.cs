@@ -12,18 +12,26 @@ namespace CityGuide.API.Controllers
     [ApiController]
     public class ValuesController : Controller
     {
+        private DataContext _context;
+
+        public ValuesController(DataContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult> GetValues()
         {
-            return new string[] { "value1", "value2" };
+            var values = await _context.Values.ToListAsync();
+            return Ok(values);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult> GetValues(int id)
         {
-            return "value";
+            var value = await _context.Values.FirstOrDefaultAsync(v => v.id == id);
+            return Ok(value);
         }
 
         // POST api/values
