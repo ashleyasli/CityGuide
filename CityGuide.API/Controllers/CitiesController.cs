@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CityGuide.API.Data;
 using CityGuide.API.Dtos;
 using Microsoft.AspNetCore.Http;
@@ -13,11 +14,13 @@ namespace CityGuide.API.Controllers
     [ApiController]
     public class CitiesController : ControllerBase
     {
-        private IAppRepository _appRepository;       
-
-        public CitiesController(IAppRepository appRepository)
+        private IAppRepository _appRepository;
+        private IMapper _mapper;
+        
+        public CitiesController(IAppRepository appRepository, IMapper mapper)
         {
-            _appRepository = appRepository;       
+            _appRepository = appRepository;
+            _mapper = mapper;
         }
 
         public ActionResult GetCities()
