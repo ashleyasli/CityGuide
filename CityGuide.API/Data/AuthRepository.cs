@@ -32,9 +32,21 @@ namespace CityGuide.API.Data
             return user;
         }
 
-        private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
+        private bool VerifyPasswordHash(string password, byte[] userPasswordHash, byte[] userPasswordSalt)
         {
-            throw new NotImplementedException();
+            using (var hmac = new System.Security.Cryptography.HMACSHA512(userPasswordSalt))
+            {
+                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                for (int i = 0; i < computedHash.Length; i++)
+                {
+                    if (computedHash[i] != userPasswordHash[i])
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
         }
 
         public async Task<User> Register(User user, string password)
@@ -53,9 +65,13 @@ namespace CityGuide.API.Data
 
         }
 
-        public Task<bool> UserExists(string userName)
+        public async Task<bool> UserExists(string userName)
         {
-            throw new NotImplementedException();
+            if (await _context.Users.AnyAsync(x => x.UserName == userName))
+            {
+                return true;
+            }
+            return false;
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
