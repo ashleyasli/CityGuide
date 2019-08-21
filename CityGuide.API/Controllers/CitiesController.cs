@@ -48,5 +48,13 @@ namespace CityGuide.API.Controllers
             var cityToReturn = _mapper.Map<CityForDetailDto>(city);
             return Ok(cityToReturn);
         }
+
+        [HttpGet]
+        [Route("Photos")]
+        public ActionResult GetPhotosByCity(int cityId)
+        {
+            var photos = _appRepository.GetPhotosByCity(cityId);
+            return Ok(photos);
+        }
     }
 }
