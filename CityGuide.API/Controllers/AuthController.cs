@@ -47,7 +47,7 @@ namespace CityGuide.API.Controllers
                 UserName = userForRegisterDto.UserName
             };
 
-            var createdUser = await _authRepository.Register(userToCreate, userForRegisterDto.Password);
+          //  var createdUser = await _authRepository.Register(userToCreate, userForRegisterDto.Password);
             return StatusCode(201);
         }
 
