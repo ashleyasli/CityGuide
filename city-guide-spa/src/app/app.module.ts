@@ -10,6 +10,7 @@ import { ValueComponent } from './value/value.component';
 import { NavComponent } from './nav/nav.component';
 import { CityComponent } from './city/city.component';
 import { CityDetailComponent} from './city/city-detail/city-detail.component';
+import { CityAddComponent} from './city/city-add/city-add.component'
 
 @NgModule({
    declarations: [
@@ -17,7 +18,8 @@ import { CityDetailComponent} from './city/city-detail/city-detail.component';
       ValueComponent,
       NavComponent,
       CityComponent, 
-      CityDetailComponent
+      CityDetailComponent,
+      CityAddComponent
    ],
    imports: [
       BrowserModule,

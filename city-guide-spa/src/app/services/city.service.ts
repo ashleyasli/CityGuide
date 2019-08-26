@@ -9,7 +9,10 @@ import { Photo } from '../models/photo';
   providedIn: 'root'
 })
 export class CityService {
-
+  add(city: City) {
+    throw new Error("Method not implemented.");
+  }
+  
   constructor(private httpClient: HttpClient) { }
   path = "https://localhost:44378/api/"
 
