@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule } from '@angular/common/http';
 import {RouterModule} from '@angular/router'
 import {appRoutes} from './routes'
+import {NgxGalleryModule} from 'ngx-gallery'
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -21,7 +22,8 @@ import { CityDetailComponent} from './city/city-detail/city-detail.component';
    imports: [
       BrowserModule,
       HttpClientModule,
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      NgxGalleryModule
    ],
    providers: [],
    bootstrap: [
