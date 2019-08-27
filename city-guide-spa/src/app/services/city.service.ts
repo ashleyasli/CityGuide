@@ -9,10 +9,7 @@ import { Photo } from '../models/photo';
   providedIn: 'root'
 })
 export class CityService {
-  add(city: City) {
-    throw new Error("Method not implemented.");
-  }
-  
+      
   constructor(private httpClient: HttpClient) { }
   path = "https://localhost:44378/api/"
 
@@ -26,5 +23,9 @@ export class CityService {
 
   getPhotosById(cityId): Observable<Photo[]> {
     return this.httpClient.get<Photo[]>(this.path + "cities/photos/?cityId="+ cityId)
+  }
+
+  add(city){
+    this.httpClient.post(this.path + 'cities/add', city).subscribe();
   }
 }

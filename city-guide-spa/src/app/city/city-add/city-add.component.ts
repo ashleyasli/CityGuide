@@ -4,6 +4,7 @@ import { CityService } from 'src/app/services/city.service';
 import { City } from 'src/app/models/city';
 
 
+
 @Component({
   selector: 'app-city-add',
   templateUrl: './city-add.component.html',
@@ -20,7 +21,7 @@ export class CityAddComponent implements OnInit {
   createCityForm() {
     this.cityAddForm = this.formBuilder.group({
         name: ["", Validators.required],
-        description: ["", Validators.required]
+        description: ["", Validators.required]       
       });
   }
   ngOnInit() {
