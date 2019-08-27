@@ -18,6 +18,7 @@ export class AuthService {
   userToken: any;
   decodedToken: any;
   jwtHelper: JwtHelper = new JwtHelper();  
+  TOKEN_KEY="token"
 
   login(loginUser: LoginUser) {
     let headers = new HttpHeaders();
@@ -28,7 +29,7 @@ export class AuthService {
         this.saveToken(data);
         this.userToken = data;
         this.decodedToken = this.jwtHelper.decodeToken(data.toString());
-        this.alertifyService.success("Sisteme giriş yapıldı");
+        this.alertifyService.success("Login to the system");
         this.router.navigateByUrl("/city");
       });
   }  
@@ -45,7 +46,24 @@ export class AuthService {
 
   saveToken(token) {
     
-    localStorage.setItem("token",token);
+    localStorage.setItem(this.TOKEN_KEY,token);
   }
-  
+
+  logOut(){
+    localStorage.removeItem(this.TOKEN_KEY)    
+  }
+
+  loggedIn(){
+    return tokenNotExpired(this.TOKEN_KEY)
+  }
+
+  get token(){
+    return localStorage.getItem(this.TOKEN_KEY);
+  }
+
+  getCurrentUserId(){
+    return this.jwtHelper.decodeToken(localStorage.getItem(this.token)).nameid
+  }
+
+
 }
