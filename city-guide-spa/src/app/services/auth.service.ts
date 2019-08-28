@@ -62,7 +62,7 @@ export class AuthService {
   }
 
   getCurrentUserId(){
-    return this.jwtHelper.decodeToken(localStorage.getItem(this.token)).nameid
+    return this.jwtHelper.decodeToken(this.token).nameid
   }
 
 

@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CityGuide.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Produces("application/json")]
+    [Route("api/Cities")]
     public class CitiesController : ControllerBase
     {
         private IAppRepository _appRepository;
