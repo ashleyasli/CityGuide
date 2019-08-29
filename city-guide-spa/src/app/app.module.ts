@@ -5,6 +5,7 @@ import {RouterModule} from '@angular/router'
 import {appRoutes} from './routes'
 import {NgxGalleryModule} from 'ngx-gallery'
 import {NgxEditorModule} from 'ngx-editor'
+import {FileUploadModule} from 'ng2-file-upload'
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { CityAddComponent} from './city/city-add/city-add.component'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AlertifyService } from './services/alertify.service';
 import { RegisterComponent } from './register/register.component';
+import { PhotoComponent } from './photo/photo.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +27,8 @@ import { RegisterComponent } from './register/register.component';
       CityComponent,
       CityDetailComponent,
       CityAddComponent,
-      RegisterComponent
+      RegisterComponent,
+      PhotoComponent
    ],
    imports: [
       BrowserModule,
@@ -34,7 +37,8 @@ import { RegisterComponent } from './register/register.component';
       NgxGalleryModule,
       FormsModule,
       ReactiveFormsModule,
-      NgxEditorModule
+      NgxEditorModule,
+      FileUploadModule
    ],
    providers: [
       AlertifyService

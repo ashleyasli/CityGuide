@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CityGuide.API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+   
     public class ValuesController : Controller
     {
         private DataContext _context;

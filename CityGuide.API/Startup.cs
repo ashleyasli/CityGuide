@@ -65,7 +65,7 @@ namespace CityGuide.API
                 app.UseDeveloperExceptionPage();
             }
             
-            app.UseHttpsRedirection();
+          
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
             app.UseAuthentication();
             app.UseMvc();            

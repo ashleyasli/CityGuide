@@ -13,7 +13,7 @@ namespace CityGuide.API.Controllers
 {
     [Produces("application/json")]
     [Route("api/Cities")]
-    public class CitiesController : ControllerBase
+    public class CitiesController : Controller
     {
         private IAppRepository _appRepository;
         private IMapper _mapper;
