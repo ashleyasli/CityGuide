@@ -9,7 +9,7 @@ import { Value } from '../models/value';
 })
 export class ValueComponent implements OnInit {
 
-  constructor(private httpCient : HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 
   values : Value [] =[];
 
@@ -21,6 +21,6 @@ export class ValueComponent implements OnInit {
   }
 
   getValues(){
-    return this.httpCient.get<Value[]>("https://localhost:44378/api/values");
+    return this.httpClient.get<Value[]>("https://localhost:44378/api/values");
   }
 }
